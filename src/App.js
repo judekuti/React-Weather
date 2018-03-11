@@ -34,7 +34,7 @@ class App extends React.Component {
             feels_like: data.current_observation.feelslike_f,
             State: data.current_observation.display_location.state_name,
             City: data.current_observation.display_location.city,
-            Country: data.current_observation..display_location.country,
+            Country: data.current_observation.display_location.country,
             local_time: data.current_observation.local_time_rfc822,
             wind: data.current_observation.wind_string,
             icon: data.current_observation.icon,
@@ -57,7 +57,7 @@ class App extends React.Component {
                         wind={this.state.wind}
                         icon={this.state.icon}
                         icon_url={this.state.icon_url}
-                        error: {this.state.error}
+                        error= {this.state.error}
                         />
 
             </div>
