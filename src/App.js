@@ -11,7 +11,9 @@ class App extends React.Component {
     getWeather = async (e) =>{
         // Prevent full page refresh
         e.preventDefault();
-        const api_call = await fetch(`http://api.wunderground.com/api/${API_Key}/conditions/q/TX/Dallas.json `);
+        const city = e.target.elements.city.value;
+        const state = e.target.elements.state.value;
+        const api_call = await fetch(`http://api.wunderground.com/api/${API_Key}/conditions/q/${state}/${city}.json `);
         const data = await api_call.json();
         console.log(data);
     }
